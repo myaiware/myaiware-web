@@ -54,6 +54,8 @@
                 :to="`/category/${category.id}`"
                 class="flex items-center justify-between p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all duration-300 transform hover:scale-[1.02]"
                 @click="closeDropdown"
+                @mouseenter="handleDropdownEnter"
+                @mouseleave="handleDropdownLeave"
               >
                 <div class="flex items-center space-x-3">
                   <div class="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/40 dark:to-purple-900/40 rounded-lg flex items-center justify-center text-xl group-hover:scale-110 transition-transform duration-300">
@@ -105,10 +107,12 @@
                 leave-from-class="transform scale-100 opacity-100 max-h-96"
                 leave-to-class="transform scale-95 opacity-0 max-h-0"
               >
-                <div 
-                  v-if="category.subcategories && expandedCategories.includes(category.id)"
-                  class="ml-6 mt-2 space-y-1 border-l-2 border-gray-200 dark:border-gray-600 pl-4"
-                >
+                        <div 
+                          v-if="category.subcategories && expandedCategories.includes(category.id)"
+                          class="ml-6 mt-2 space-y-1 border-l-2 border-gray-200 dark:border-gray-600 pl-4"
+                          @mouseenter="handleDropdownEnter"
+                          @mouseleave="handleDropdownLeave"
+                        >
                   <NuxtLink
                     v-for="subcategory in category.subcategories"
                     :key="subcategory.id"
@@ -172,141 +176,39 @@ const expandedCategories = ref<string[]>([]);
 const menuContainer = ref<HTMLElement>();
 let hideTimeout: NodeJS.Timeout | null = null;
 
-// Categories data with subcategories
-const categories = ref<Category[]>([
-  {
-    id: 'wedding',
-    name: 'Ảnh cưới Studio',
-    icon: '💒',
-    count: 1247,
-    description: 'Ảnh cưới chuyên nghiệp với studio lighting',
-    subcategories: [
-      { id: 'traditional', name: 'Cưới truyền thống', count: 456 },
-      { id: 'modern', name: 'Cưới hiện đại', count: 321 },
-      { id: 'outdoor', name: 'Cưới ngoại cảnh', count: 289 },
-      { id: 'prewedding', name: 'Ảnh cưới concept', count: 181 }
-    ]
-  },
-  {
-    id: 'anime',
-    name: 'Anime & Manga',
-    icon: '🎭',
-    count: 2156,
-    description: 'Nhân vật anime và manga style',
-    subcategories: [
-      { id: 'character', name: 'Nhân vật anime', count: 892 },
-      { id: 'scenery', name: 'Phong cảnh anime', count: 567 },
-      { id: 'chibi', name: 'Chibi style', count: 334 },
-      { id: 'realistic', name: 'Anime realistic', count: 363 }
-    ]
-  },
-  {
-    id: 'landscape',
-    name: 'Phong cảnh',
-    icon: '🏔️',
-    count: 1834,
-    description: 'Thiên nhiên và cảnh quan tuyệt đẹp',
-    subcategories: [
-      { id: 'mountain', name: 'Núi non', count: 456 },
-      { id: 'ocean', name: 'Biển cả', count: 389 },
-      { id: 'forest', name: 'Rừng cây', count: 334 },
-      { id: 'sunset', name: 'Hoàng hôn', count: 655 }
-    ]
-  },
-  {
-    id: 'portrait',
-    name: 'Ảnh thẻ',
-    icon: '📸',
-    count: 987,
-    description: 'Chân dung chuyên nghiệp và ảnh thẻ',
-    subcategories: [
-      { id: 'professional', name: 'Ảnh thẻ công sở', count: 445 },
-      { id: 'student', name: 'Ảnh thẻ học sinh', count: 234 },
-      { id: 'passport', name: 'Ảnh hộ chiếu', count: 189 },
-      { id: 'visa', name: 'Ảnh visa', count: 119 }
-    ]
-  },
-  {
-    id: 'festival',
-    name: 'Lễ hội Trung thu',
-    icon: '🏮',
-    count: 543,
-    description: 'Không khí lễ hội truyền thống Việt Nam',
-    subcategories: [
-      { id: 'lantern', name: 'Đèn lồng', count: 234 },
-      { id: 'mooncake', name: 'Bánh trung thu', count: 156 },
-      { id: 'children', name: 'Trẻ em rước đèn', count: 98 },
-      { id: 'decoration', name: 'Trang trí lễ hội', count: 55 }
-    ]
-  },
-  {
-    id: 'art',
-    name: 'Nghệ thuật số',
-    icon: '🎨',
-    count: 1678,
-    description: 'Tác phẩm nghệ thuật và abstract art',
-    subcategories: [
-      { id: 'abstract', name: 'Trừu tượng', count: 567 },
-      { id: 'digital', name: 'Nghệ thuật số', count: 445 },
-      { id: 'concept', name: 'Concept art', count: 334 },
-      { id: 'illustration', name: 'Minh họa', count: 332 }
-    ]
-  },
-  {
-    id: 'fashion',
-    name: 'Thời trang',
-    icon: '👗',
-    count: 892,
-    description: 'Xu hướng thời trang và street style',
-    subcategories: [
-      { id: 'streetwear', name: 'Street style', count: 234 },
-      { id: 'formal', name: 'Trang phục công sở', count: 189 },
-      { id: 'casual', name: 'Thời trang thường ngày', count: 267 },
-      { id: 'haute-couture', name: 'Haute couture', count: 202 }
-    ]
-  },
-  {
-    id: 'architecture',
-    name: 'Kiến trúc',
-    icon: '🏛️',
-    count: 654,
-    description: 'Công trình kiến trúc và nội thất',
-    subcategories: [
-      { id: 'modern', name: 'Kiến trúc hiện đại', count: 234 },
-      { id: 'traditional', name: 'Kiến trúc cổ điển', count: 167 },
-      { id: 'interior', name: 'Nội thất', count: 145 },
-      { id: 'exterior', name: 'Ngoại thất', count: 108 }
-    ]
-  }
-]);
+// Fetch categories from API
+const { data: categoriesResponse } = await useFetch('/api/categories');
+const categories = computed(() => categoriesResponse.value?.data || []);
 
-// Hover management methods
-const handleMouseEnter = () => {
-  if (hideTimeout) {
-    clearTimeout(hideTimeout);
-    hideTimeout = null;
-  }
-  showDropdown.value = true;
-};
+  // Hover management methods
+  const handleMouseEnter = () => {
+    if (hideTimeout) {
+      clearTimeout(hideTimeout);
+      hideTimeout = null;
+    }
+    showDropdown.value = true;
+  };
 
-const handleMouseLeave = () => {
-  hideTimeout = setTimeout(() => {
-    showDropdown.value = false;
-  }, 300); // Longer delay for better UX
-};
+  const handleMouseLeave = () => {
+    hideTimeout = setTimeout(() => {
+      showDropdown.value = false;
+      expandedCategories.value = []; // Reset expanded categories when closing
+    }, 500); // Increased delay for better UX
+  };
 
-const handleDropdownEnter = () => {
-  if (hideTimeout) {
-    clearTimeout(hideTimeout);
-    hideTimeout = null;
-  }
-};
+  const handleDropdownEnter = () => {
+    if (hideTimeout) {
+      clearTimeout(hideTimeout);
+      hideTimeout = null;
+    }
+  };
 
-const handleDropdownLeave = () => {
-  hideTimeout = setTimeout(() => {
-    showDropdown.value = false;
-  }, 300);
-};
+  const handleDropdownLeave = () => {
+    hideTimeout = setTimeout(() => {
+      showDropdown.value = false;
+      expandedCategories.value = []; // Reset expanded categories when closing
+    }, 500); // Increased delay for better UX
+  };
 
 // Toggle methods
 const toggleDropdown = () => {
