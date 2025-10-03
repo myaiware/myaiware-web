@@ -1,41 +1,10 @@
 <template>
-  <div class="min-h-screen bg-gray-900">
-    <!-- Navigation -->
-    <!-- Navigation Header -->
-    <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200/20 dark:border-white/10 transition-all duration-500" :class="{ 'shadow-lg': scrolled }">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <div class="flex items-center space-x-3">
-            <img src="/myaiware-logo.png" alt="MyAIware" class="w-10 h-10 rounded-xl shadow-lg transition-transform duration-300 hover:scale-110">
-            <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              MyAIware
-            </h1>
-          </div>
-          <div class="hidden md:flex items-center space-x-8">
-            <a href="#discover" @click="smoothScroll('discover')" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-medium relative group">
-              Khám phá
-              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a href="#generate" @click="smoothScroll('generate')" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-medium relative group">
-              Tạo ảnh AI
-              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a href="#categories" @click="smoothScroll('categories')" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-medium relative group">
-              Danh mục
-              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
-            </a>
-          </div>
-          <div class="flex items-center space-x-4">
-            <button @click="showLoginModal = true" class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2.5 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-medium">
-              Đăng nhập
-            </button>
-          </div>
-        </div>
-      </div>
-    </nav>
+  <div class="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <!-- Modern Navigation -->
+    <ModernNavigation />
 
     <!-- Main Content -->
-    <main>
+    <main class="pt-16">
       <slot />
     </main>
 
@@ -97,22 +66,5 @@
 </template>
 
 <script setup lang="ts">
-const user = ref(null) // Will be replaced with actual auth state
-const showUserMenu = ref(false)
-const showMobileMenu = ref(false)
-
-// Close menus when clicking outside
-onMounted(() => {
-  document.addEventListener('click', (e) => {
-    if (!e.target?.closest('.relative')) {
-      showUserMenu.value = false
-    }
-  })
-})
-
-const logout = () => {
-  // Implement logout logic
-  user.value = null
-  showUserMenu.value = false
-}
+// Layout is now simplified with ModernNavigation component handling all navigation logic
 </script>
