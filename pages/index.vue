@@ -37,7 +37,7 @@
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
       <!-- Animated Background -->
       <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-pink-600/20 dark:from-blue-900/40 dark:via-purple-900/40 dark:to-pink-900/40"></div>
-      <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div class="absolute inset-0 opacity-20" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);"></div>
       
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <!-- Logo Animation -->
@@ -352,19 +352,19 @@
           <div>
             <h3 class="text-gray-800 dark:text-white font-semibold mb-4">Nền tảng</h3>
             <ul class="space-y-2 text-gray-600 dark:text-gray-400">
-              <li><a href="/discover" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Khám phá</a></li>
-              <li><a href="/generate" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Tạo ảnh</a></li>
-              <li><a href="/collections" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Bộ sưu tập</a></li>
-              <li><a href="/marketplace" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Thị trường</a></li>
+              <li><a href="#discover" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Khám phá</a></li>
+              <li><a href="#generate" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Tạo ảnh</a></li>
+              <li><a href="#collections" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Bộ sưu tập</a></li>
+              <li><a href="#marketplace" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Thị trường</a></li>
             </ul>
           </div>
           <div>
             <h3 class="text-gray-800 dark:text-white font-semibold mb-4">Hỗ trợ</h3>
             <ul class="space-y-2 text-gray-600 dark:text-gray-400">
-              <li><a href="/help" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Trung tâm trợ giúp</a></li>
-              <li><a href="/contact" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Liên hệ</a></li>
-              <li><a href="/privacy" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Chính sách bảo mật</a></li>
-              <li><a href="/terms" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Điều khoản sử dụng</a></li>
+              <li><a href="#help" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Trung tâm trợ giúp</a></li>
+              <li><a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Liên hệ</a></li>
+              <li><a href="#privacy" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Chính sách bảo mật</a></li>
+              <li><a href="#terms" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Điều khoản sử dụng</a></li>
             </ul>
           </div>
         </div>
