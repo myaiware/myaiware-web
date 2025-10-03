@@ -14,7 +14,7 @@
    ```
    Framework preset: Nuxt.js
    Build command: npm run build
-   Build output directory: .output/public
+   Build output directory: dist
    Root directory: (leave empty)
    ```
 
@@ -42,7 +42,7 @@
 2. **Build and Deploy:**
    ```bash
    npm run build
-   wrangler pages deploy .output/public --project-name=myaiware-web
+   wrangler pages deploy dist --project-name=myaiware-web
    ```
 
 ## 🔧 Configuration

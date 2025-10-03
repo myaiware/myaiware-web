@@ -28,7 +28,7 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "clean": "rm -rf .nuxt dist .output",
-    "deploy": "npm run build && wrangler pages deploy .output/public --project-name=myaiware-web"
+    "deploy": "npm run build && wrangler pages deploy dist --project-name=myaiware-web"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
