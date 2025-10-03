@@ -16,6 +16,7 @@
    Build command: npm run build
    Build output directory: dist
    Root directory: (leave empty)
+   Node.js version: 18
    ```
 
 3. **Set Environment Variables:**
@@ -46,6 +47,11 @@
    ```
 
 ## 🔧 Configuration
+
+### Important Notes
+
+- **wrangler.toml**: This file is configured for Cloudflare Pages compatibility. Build settings should be configured in the Cloudflare Pages dashboard, not in the wrangler.toml file.
+- **Build Output**: The application builds to the `dist` directory when using the `cloudflare-pages` preset.
 
 ### Environment Variables
 

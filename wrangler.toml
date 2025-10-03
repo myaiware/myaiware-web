@@ -3,18 +3,6 @@ name = "myaiware-web"
 compatibility_date = "2024-10-03"
 pages_build_output_dir = "dist"
 
-[env.production]
-name = "myaiware-web"
-
-[env.preview]
-name = "myaiware-web-preview"
-
-# Build configuration
-[build]
-command = "npm run build"
-cwd = "."
-watch_dir = "."
-
 # Environment variables (set these in Cloudflare Pages dashboard)
 # NUXT_PUBLIC_CLOUDINARY_CLOUD_NAME
 # NUXT_PUBLIC_API_BASE
