@@ -12,10 +12,12 @@ useHead({
   titleTemplate: '%s - MyAIware',
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    { name: 'theme-color', content: '#7c3aed' }
+    { name: 'theme-color', content: '#3B82F6' }
   ],
   link: [
-    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+    { rel: 'icon', type: 'image/png', href: '/myaiware-logo.png' },
+    { rel: 'apple-touch-icon', href: '/myaiware-logo.png' }
   ]
 })
 
