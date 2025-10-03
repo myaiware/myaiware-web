@@ -19,7 +19,7 @@
   "author": "MyAIware Team",
   "license": "MIT",
   "scripts": {
-    "build": "nuxt build",
+    "build": "nuxt build --preset=cloudflare-pages",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
@@ -27,7 +27,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
-    "clean": "rm -rf .nuxt dist .output"
+    "clean": "rm -rf .nuxt dist .output",
+    "deploy": "npm run build && wrangler pages deploy .output/public --project-name=myaiware-web"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
