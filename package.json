@@ -1,0 +1,55 @@
+{
+  "name": "myaiware-web",
+  "version": "1.0.0",
+  "description": "MyAIware web application - AI prompt and image sharing platform",
+  "private": false,
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/myaiware-web.git"
+  },
+  "keywords": [
+    "ai",
+    "prompts",
+    "images",
+    "nuxt",
+    "vue",
+    "tailwind"
+  ],
+  "author": "MyAIware Team",
+  "license": "MIT",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "clean": "rm -rf .nuxt dist .output"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxt/eslint-config": "^0.2.0",
+    "@nuxtjs/tailwindcss": "^6.8.4",
+    "eslint": "^8.55.0",
+    "nuxt": "^3.8.0",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "@nuxt/image": "^1.1.0",
+    "@nuxtjs/seo": "^2.0.0-rc.8",
+    "@nuxtjs/color-mode": "^3.3.2",
+    "@vueuse/core": "^10.6.1",
+    "@vueuse/nuxt": "^10.6.1",
+    "vue-masonry-css": "^1.0.3",
+    "zod": "^3.22.4",
+    "@heroicons/vue": "^2.0.18"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}
