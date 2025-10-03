@@ -525,6 +525,276 @@ const mockImages: Image[] = [
     likes: 167,
     views: 723,
     category: 'art'
+  },
+  {
+    id: '7',
+    url: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=1000&fit=crop',
+    prompt: {
+      title: 'Rừng thần tiên huyền ảo',
+      body: 'Mystical enchanted forest, ethereal lighting, magical atmosphere, ancient trees, misty pathways, fantasy landscape, cinematic depth'
+    },
+    user: {
+      handle: 'fantasy_world',
+      avatar: 'https://api.dicebear.com/7.x/initials/svg?seed=fantasy_world'
+    },
+    likes: 412,
+    views: 1850,
+    category: 'landscape'
+  },
+  {
+    id: '8',
+    url: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&h=1200&fit=crop',
+    prompt: {
+      title: 'Cô dâu phong cách vintage',
+      body: 'Vintage style bride portrait, classic wedding dress, retro makeup, soft sepia tones, romantic atmosphere, timeless elegance'
+    },
+    user: {
+      handle: 'vintage_bride',
+      avatar: 'https://api.dicebear.com/7.x/initials/svg?seed=vintage_bride'
+    },
+    likes: 298,
+    views: 1340,
+    category: 'wedding'
+  },
+  {
+    id: '9',
+    url: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=900&fit=crop',
+    prompt: {
+      title: 'Samurai anime character',
+      body: 'Epic samurai warrior in anime style, detailed armor, katana sword, dramatic pose, cherry blossoms background, high contrast lighting'
+    },
+    user: {
+      handle: 'samurai_art',
+      avatar: 'https://api.dicebear.com/7.x/initials/svg?seed=samurai_art'
+    },
+    likes: 523,
+    views: 2100,
+    category: 'anime'
+  },
+  {
+    id: '10',
+    url: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&h=800&fit=crop',
+    prompt: {
+      title: 'CEO portrait chuyên nghiệp',
+      body: 'Executive business portrait, confident expression, professional attire, corporate background, high-end photography, leadership presence'
+    },
+    user: {
+      handle: 'corp_photographer',
+      avatar: 'https://api.dicebear.com/7.x/initials/svg?seed=corp_photographer'
+    },
+    likes: 156,
+    views: 678,
+    category: 'portrait'
+  },
+  {
+    id: '11',
+    url: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=700&fit=crop',
+    prompt: {
+      title: 'Đèn lồng trung thu rực rỡ',
+      body: 'Colorful mid-autumn festival lanterns, traditional Vietnamese celebration, warm golden lighting, festive decorations, cultural heritage'
+    },
+    user: {
+      handle: 'culture_keeper',
+      avatar: 'https://api.dicebear.com/7.x/initials/svg?seed=culture_keeper'
+    },
+    likes: 334,
+    views: 1456,
+    category: 'festival'
+  },
+  {
+    id: '12',
+    url: 'https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800&h=1100&fit=crop',
+    prompt: {
+      title: 'Digital art futuristic',
+      body: 'Futuristic digital artwork, neon colors, cyberpunk aesthetic, geometric shapes, glowing effects, modern technology theme'
+    },
+    user: {
+      handle: 'cyber_artist',
+      avatar: 'https://api.dicebear.com/7.x/initials/svg?seed=cyber_artist'
+    },
+    likes: 445,
+    views: 1789,
+    category: 'art'
+  },
+  {
+    id: '13',
+    url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=1200&fit=crop',
+    prompt: {
+      title: 'Núi Alps hùng vĩ',
+      body: 'Majestic Alpine mountains, snow-capped peaks, pristine lakes, dramatic sky, panoramic view, breathtaking natural beauty'
+    },
+    user: {
+      handle: 'mountain_explorer',
+      avatar: 'https://api.dicebear.com/7.x/initials/svg?seed=mountain_explorer'
+    },
+    likes: 267,
+    views: 1123,
+    category: 'landscape'
+  },
+  {
+    id: '14',
+    url: 'https://images.unsplash.com/photo-1595433707802-6b2626ef1c91?w=800&h=1000&fit=crop',
+    prompt: {
+      title: 'Cô dâu bohemian style',
+      body: 'Bohemian bride in flowing dress, flower crown, natural outdoor setting, dreamy atmosphere, free-spirited wedding photography'
+    },
+    user: {
+      handle: 'boho_weddings',
+      avatar: 'https://api.dicebear.com/7.x/initials/svg?seed=boho_weddings'
+    },
+    likes: 389,
+    views: 1567,
+    category: 'wedding'
+  },
+  {
+    id: '15',
+    url: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=800&fit=crop',
+    prompt: {
+      title: 'Magical girl anime',
+      body: 'Cute magical girl character, sparkly costume, magical wand, pastel colors, kawaii style, shoujo manga aesthetic'
+    },
+    user: {
+      handle: 'magical_dreams',
+      avatar: 'https://api.dicebear.com/7.x/initials/svg?seed=magical_dreams'
+    },
+    likes: 612,
+    views: 2456,
+    category: 'anime'
+  },
+  {
+    id: '16',
+    url: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&h=800&fit=crop',
+    prompt: {
+      title: 'Doanh nhân thành đạt',
+      body: 'Successful entrepreneur portrait, modern office background, confident smile, business casual attire, inspiring leadership'
+    },
+    user: {
+      handle: 'success_stories',
+      avatar: 'https://api.dicebear.com/7.x/initials/svg?seed=success_stories'
+    },
+    likes: 198,
+    views: 834,
+    category: 'portrait'
+  },
+  {
+    id: '17',
+    url: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=900&fit=crop',
+    prompt: {
+      title: 'Bánh trung thu truyền thống',
+      body: 'Traditional Vietnamese mooncakes, mid-autumn festival treats, elegant presentation, cultural significance, festive arrangement'
+    },
+    user: {
+      handle: 'tradition_lover',
+      avatar: 'https://api.dicebear.com/7.x/initials/svg?seed=tradition_lover'
+    },
+    likes: 223,
+    views: 967,
+    category: 'festival'
+  },
+  {
+    id: '18',
+    url: 'https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800&h=1300&fit=crop',
+    prompt: {
+      title: 'Abstract ocean waves',
+      body: 'Abstract interpretation of ocean waves, fluid dynamics, blue gradient colors, organic shapes, peaceful meditation art'
+    },
+    user: {
+      handle: 'ocean_dreams',
+      avatar: 'https://api.dicebear.com/7.x/initials/svg?seed=ocean_dreams'
+    },
+    likes: 345,
+    views: 1234,
+    category: 'art'
+  },
+  {
+    id: '19',
+    url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
+    prompt: {
+      title: 'Hoàng hôn trên biển',
+      body: 'Golden sunset over calm ocean, peaceful seascape, warm colors, romantic atmosphere, horizon line, serene natural beauty'
+    },
+    user: {
+      handle: 'sunset_chaser',
+      avatar: 'https://api.dicebear.com/7.x/initials/svg?seed=sunset_chaser'
+    },
+    likes: 456,
+    views: 1890,
+    category: 'landscape'
+  },
+  {
+    id: '20',
+    url: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&h=1100&fit=crop',
+    prompt: {
+      title: 'Cô dâu hiện đại minimalist',
+      body: 'Modern minimalist bride, clean lines, simple elegant dress, contemporary wedding photography, sophisticated style'
+    },
+    user: {
+      handle: 'modern_bride',
+      avatar: 'https://api.dicebear.com/7.x/initials/svg?seed=modern_bride'
+    },
+    likes: 312,
+    views: 1445,
+    category: 'wedding'
+  },
+  {
+    id: '21',
+    url: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=1200&fit=crop',
+    prompt: {
+      title: 'Mecha robot anime',
+      body: 'Giant mecha robot, detailed mechanical design, action pose, futuristic battlefield, anime style, epic scale'
+    },
+    user: {
+      handle: 'mecha_master',
+      avatar: 'https://api.dicebear.com/7.x/initials/svg?seed=mecha_master'
+    },
+    likes: 678,
+    views: 2789,
+    category: 'anime'
+  },
+  {
+    id: '22',
+    url: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&h=800&fit=crop',
+    prompt: {
+      title: 'Nữ giám đốc quyền lực',
+      body: 'Powerful female executive, confident posture, professional blazer, corporate environment, leadership presence, success mindset'
+    },
+    user: {
+      handle: 'power_women',
+      avatar: 'https://api.dicebear.com/7.x/initials/svg?seed=power_women'
+    },
+    likes: 234,
+    views: 1012,
+    category: 'portrait'
+  },
+  {
+    id: '23',
+    url: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=800&fit=crop',
+    prompt: {
+      title: 'Lân sư rồng trung thu',
+      body: 'Traditional dragon dance performance, mid-autumn festival celebration, vibrant colors, cultural performance, festive energy'
+    },
+    user: {
+      handle: 'dragon_dance',
+      avatar: 'https://api.dicebear.com/7.x/initials/svg?seed=dragon_dance'
+    },
+    likes: 567,
+    views: 2134,
+    category: 'festival'
+  },
+  {
+    id: '24',
+    url: 'https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800&h=900&fit=crop',
+    prompt: {
+      title: 'Mandala sacred geometry',
+      body: 'Intricate mandala design, sacred geometry patterns, spiritual artwork, meditative colors, symmetrical composition'
+    },
+    user: {
+      handle: 'sacred_art',
+      avatar: 'https://api.dicebear.com/7.x/initials/svg?seed=sacred_art'
+    },
+    likes: 389,
+    views: 1567,
+    category: 'art'
   }
 ];
 
